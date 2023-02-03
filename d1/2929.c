@@ -41,7 +41,6 @@ int PilhaPush(TPilha *pilha, TItem item)
     TCelula *newCelula = (TCelula *)malloc(sizeof(TCelula));
     if (newCelula == NULL)
     {
-        printf("entrei");
         return 0;
     }
     newCelula->item = item;
