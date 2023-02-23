@@ -36,76 +36,35 @@ int main(int argc, char const *argv[])
         switch (op)
         {
         case '+':
-            if (d1 == d2)
-            {
-                d3 = d1;
-                n3 = n1 + n2;
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
-            else
-            {
-                d3 = d1 * d2;
-                n3 = (d3 / d1 * n1) + (d3 / d2 * n2);
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
+            n3 = n1 * d2 + n2 * d1;
+            d3 = d1 * d2;
+            printf("%d/%d = ", n3, d3);
+            simplifica(&n3, &d3);
+            printf("%d/%d\n", n3, d3);
             break;
         case '-':
-            if (d1 == d2)
-            {
-                d3 = d1;
-                n3 = n1 - n2;
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
-            else
-            {
-                d3 = d1 * d2;
-                n3 = (d3 / d1 * n1) - (d3 / d2 * n2);
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
+            n3 = n1 * d2 - n2 * d1;
+            d3 = d1 * d2;
+            printf("%d/%d = ", n3, d3);
+            simplifica(&n3, &d3);
+            printf("%d/%d\n", n3, d3);
+
             break;
         case '*':
-            if (n1 == n2 && d1 == d2)
-            {
-                n3 = n1;
-                d3 = d1;
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
-            else
-            {
-                d3 = d1 * d2;
-                n3 = n1 * n2;
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
+            n3 = n1 * n2;
+            d3 = d1 * d2;
+            printf("%d/%d = ", n3, d3);
+            simplifica(&n3, &d3);
+            printf("%d/%d\n", n3, d3);
+
             break;
         case '/':
-            if (n1 == n2 && d1 == d2)
-            {
-                n3 = n1;
-                d3 = d1;
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
-            else
-            {
-                d3 = d1 * n2;
-                n3 = n1 * d2;
-                printf("%d/%d = ", n3, d3);
-                simplifica(&n3, &d3);
-                printf("%d/%d\n", n3, d3);
-            }
+            n3 = n1 * d2;
+            d3 = n2 * d1;
+            printf("%d/%d = ", n3, d3);
+            simplifica(&n3, &d3);
+            printf("%d/%d\n", n3, d3);
+
             break;
         default:
             break;
