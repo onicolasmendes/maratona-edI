@@ -1,7 +1,7 @@
-all: 2136.o
-	@gcc 2136.o -o programa -Wall
+all: 2693.o
+	@gcc 2693.o -o programa -Wall
 	@rm -rf *.o
-2136.o: 2136.c
-	@gcc -c 2136.c -Wall
+2693.o: 2693.c
+	@gcc -c 2693.c -Wall
 run:
 	@./programa
